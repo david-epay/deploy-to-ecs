@@ -45,7 +45,6 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "revision": 16,
     "networkMode": "awsvpc",
     "volumes": [],
     "placementConstraints": [],
