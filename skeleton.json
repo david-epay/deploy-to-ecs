@@ -1,6 +1,6 @@
-[
-  "arn:aws:ecs:eu-west-1:333854148048:task-definition/nginxdemos-hello:16",
-  [
+{
+  "taskDefinitionArn": "arn:aws:ecs:eu-west-1:333854148048:task-definition/nginxdemos-hello:16",
+  "containerDefinitions": [
     {
       "name": "nginxdemos-hello",
       "image": "nginxdemos/hello",
@@ -40,14 +40,14 @@
       "systemControls": []
     }
   ],
-  "nginxdemos-hello",
-  "arn:aws:iam::333854148048:role/ecsTaskRole",
-  "arn:aws:iam::333854148048:role/ecsTaskExecutionRole",
-  "awsvpc",
-  16,
-  [],
-  "ACTIVE",
-  [
+  "family": "nginxdemos-hello",
+  "taskRoleArn": "arn:aws:iam::333854148048:role/ecsTaskRole",
+  "executionRoleArn": "arn:aws:iam::333854148048:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 16,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
     {
       "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
     },
@@ -73,20 +73,20 @@
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
     }
   ],
-  [],
-  [
+  "placementConstraints": [],
+  "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  {
+  "runtimePlatform": {
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  [
+  "requiresCompatibilities": [
     "FARGATE"
   ],
-  "1024",
-  "2048",
-  "2022-08-28T14:29:45.695000+01:00",
-  "arn:aws:iam::333854148048:user/david"
-]
+  "cpu": "1024",
+  "memory": "2048",
+  "registeredAt": "2022-08-28T14:29:45.695000+01:00",
+  "registeredBy": "arn:aws:iam::333854148048:user/david"
+}
