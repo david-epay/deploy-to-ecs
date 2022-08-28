@@ -7,8 +7,8 @@ on:
 
 env:
   AWS_REGION: eu-west-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECS_SERVICE: nginxdemos               # set this to your Amazon ECS service name
-  ECS_CLUSTER: earnipay-ecs-dev         # set this to your Amazon ECS cluster name
+  ECS_SERVICE: nginx-demo-service               # set this to your Amazon ECS service name
+  ECS_CLUSTER: demo-cluster         # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: task-def.json  # set this to the path to your Amazon ECS task definition
   CONTAINER_NAME: nginxdemos-hello           # set this to the name of the container in the
 
