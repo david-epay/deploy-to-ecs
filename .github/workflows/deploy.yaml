@@ -7,7 +7,7 @@ name: Deploy to Amazon ECS
 
 env:
   AWS_REGION: eu-west-1
-  ECS_SERVICE: nginx-test-1
+  ECS_SERVICE: nginx-test-2
   ECS_CLUSTER: demo-cluster
   CONTAINER_NAME: nginxdemos-hello
   CONTAINER_IMAGE: nginxdemos/hello
@@ -49,4 +49,4 @@ jobs:
           task-definition: ${{ steps.update-task-def.outputs.task-definition }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
-          wait-for-service-stability: true
+          wait-for-service-stability: false
