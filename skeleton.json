@@ -1,0 +1,92 @@
+[
+  "arn:aws:ecs:eu-west-1:333854148048:task-definition/nginxdemos-hello:16",
+  [
+    {
+      "name": "nginxdemos-hello",
+      "image": "nginxdemos/hello",
+      "cpu": 0,
+      "links": [],
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "secrets": [],
+      "dnsServers": [],
+      "dnsSearchDomains": [],
+      "extraHosts": [],
+      "dockerSecurityOptions": [],
+      "dockerLabels": {},
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/nginxdemos-hello",
+          "awslogs-region": "eu-west-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "nginxdemos-hello",
+  "arn:aws:iam::333854148048:role/ecsTaskRole",
+  "arn:aws:iam::333854148048:role/ecsTaskExecutionRole",
+  "awsvpc",
+  16,
+  [],
+  "ACTIVE",
+  [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+    }
+  ],
+  [],
+  [
+    "EC2",
+    "FARGATE"
+  ],
+  {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  [
+    "FARGATE"
+  ],
+  "1024",
+  "2048",
+  "2022-08-28T14:29:45.695000+01:00",
+  "arn:aws:iam::333854148048:user/david"
+]

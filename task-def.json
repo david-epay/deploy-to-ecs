@@ -1,33 +1,51 @@
 {
     "containerDefinitions": [
-            {
-                "name": "nginxdemos-hello",
-                "image": "nginxdemos/hello",
-                "cpu": 0,
-                "portMappings": [
-                    {
-                        "containerPort": 80,
-                        "hostPort": 80,
-                        "protocol": "tcp"
-                    }
-                ],
-                "essential": true,
-                "environment": [],
-                "mountPoints": [],
-                "volumesFrom": [],
-                "logConfiguration": {
-                    "logDriver": "awslogs",
-                    "options": {
-                        "awslogs-group": "/ecs/nginxdemos-hello",
-                        "awslogs-region": "nginxdemos/hello",
-                        "awslogs-stream-prefix": "ecs"
-                    }
-                }
-            }
+        {
+            "name": "nginxdemos-hello",
+            "image": "nginxdemos/hello",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+              {
+                "containerPort": 80,
+                "hostPort": 80,
+                "protocol": "tcp"
+              }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "logConfiguration": {
+              "logDriver": "awslogs",
+              "options": {
+                "awslogs-create-group": "true",
+                "awslogs-group": "/ecs/nginxdemos-hello",
+                "awslogs-region": "eu-west-1",
+                "awslogs-stream-prefix": "ecs"
+              },
+              "secretOptions": []
+            },
+            "systemControls": []
+          }
     ],
     "family": "nginxdemos-hello",
     "taskRoleArn": "arn:aws:iam::333854148048:role/ecsTaskRole",
     "executionRoleArn": "arn:aws:iam::333854148048:role/ecsTaskExecutionRole",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "revision": 16,
     "networkMode": "awsvpc",
     "volumes": [],
     "placementConstraints": [],
